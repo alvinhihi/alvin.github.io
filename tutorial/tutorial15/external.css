@@ -1,0 +1,56 @@
+body {
+            top-margin: 20px;
+            left-margin: 50px;
+            background-image: url('gbeye-fp4716-pokemon-pikachu-neon-poster-61x91-5cm_fd105bc2-75f2-4c83-98b4-db5f74f66cb0.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .header-line {
+            height: 4px;
+            color: blue;
+            width: 50%;
+            border: none;
+            background-color: blue; 
+        }
+
+        .main-heading {
+            text-align: center;
+        }
+
+        .character-container {
+            margin-bottom: 30px;
+        }
+
+        .character-image {
+            width: 200px;
+            display: block;
+            margin-bottom: 20px;
+        }
+
+	
+p {
+            color: pink;
+            font-size: 24px;
+            font-weight: bold;
+	    margin-top: 0;
+            margin-bottom: 0;
+	    box-shadow: 10px 10px pink;    /* NEW */
+	    word-spacing: 20px;
+	    text-shadow: 2px 2px pink;
+        }
+
+
+
+.button {
+    background-color: #ff4081;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;           /* NEW */
+}
+
+.button:hover {
+    background-color: pink;
+}
