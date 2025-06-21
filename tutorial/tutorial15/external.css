@@ -35,9 +35,9 @@ p {
             font-weight: bold;
 	    margin-top: 0;
             margin-bottom: 0;
-	    box-shadow: 10px 10px pink;    /* NEW */
+	    box-shadow: 10px 10px pink;    /* NEW css */
 	    word-spacing: 20px;
-	    text-shadow: 2px 2px pink;    /* NEW */
+	    text-shadow: 2px 2px pink;    /* NEW css */
         }
 
 
@@ -48,7 +48,7 @@ p {
     padding: 10px 20px;
     border: none;
     border-radius: 20px;
-    cursor: pointer;           /* NEW */
+    cursor: pointer;           /* NEW css */
 }
 
 .button:hover {
