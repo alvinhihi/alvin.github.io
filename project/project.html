@@ -15,8 +15,21 @@
 		<span><a href="https://alvinhihi.github.io/alvin.github.io/project/about us.html">About Us</a></span>
 		<span><a href="https://alvinhihi.github.io/alvin.github.io/project/timetable.html">Timetable</a></span>
 		<span><a href="https://alvinhihi.github.io/alvin.github.io/project/lecturer.html">Lecturer</a></span>
-		<span><button><a href="https://alvinhihi.github.io/alvin.github.io/project/login.html">Login</a></button></span>
+		<span><button onclick="document.getElementById('loginModal').style.display='flex'">Login</button></span>
 	</div>
+	  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <h3>Login</h3>
+      <input type="text" placeholder="Username"><br>
+      <input type="password" id="password" placeholder="Password" oninput="checkStrength(this.value)">
+      <div style="height: 6px; background: #eee; margin-top: 5px;">
+        <div id="strength-bar" style="height: 6px; width: 0%; background: red;"></div>
+      </div>
+      <div id="strength-text" style="font-size: 12px; text-align: right;">Strength:</div>
+      <button onclick="alert('Logged in!')">Submit</button>
+      <button onclick="document.getElementById('loginModal').style.display='none'">Close</button>
+    </div>
+  </div>
 </header>
 
   <div class="welcome">
@@ -45,6 +58,26 @@
   <footer>
     <p>&copy; 2025 University of Alvin. All rights reserved.</p>
   </footer>
+	
+  <script>
+    function checkStrength(password) {
+      const bar = document.getElementById("strength-bar");
+      const text = document.getElementById("strength-text");
 
+      let strength = 0;
+      if (password.length >= 6) strength++;
+      if (password.match(/[A-Z]/)) strength++;
+      if (password.match(/[0-9]/)) strength++;
+      if (password.match(/[^A-Za-z0-9]/)) strength++;
+
+      const colors = ["red", "orange", "gold", "green"];
+      const levels = ["Weak", "Medium", "Good", "Strong"];
+
+      bar.style.width = (strength * 25) + "%";
+      bar.style.background = colors[strength - 1] || "red";
+      text.textContent = "Strength: " + (levels[strength - 1] || "Too short");
+    }
+  </script>
+	
 </body>
 </html>
