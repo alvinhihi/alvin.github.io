@@ -128,7 +128,12 @@ footer {
       color: #333333;
     }
 
-.button {
-	boder-radius: 10px;
-	background-color: red;
+button {
+    background-color: #004488;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
